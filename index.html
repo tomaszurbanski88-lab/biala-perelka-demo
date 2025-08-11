@@ -1,98 +1,256 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr Adwent - Medycyna Estetyczna</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-}
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
 
-header {
-  background-color: #f4f4f4;
-  padding: 20px 0;
-}
+    header {
+      background-color: #f4f4f4;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
-}
+    header h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      gap: 30px;
+    }
 
-nav ul li {
-  margin: 0 15px;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
+    nav ul li a:hover {
+      background-color: #27ae60;
+      color: white;
+    }
 
-#hero {
-  background: url('hero-image.jpg') no-repeat center center/cover;
-  color: white;
-  text-align: center;
-  padding: 100px 0;
-}
+    #hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      position: relative;
+    }
 
-#hero h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
+    #hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(39, 174, 96, 0.7);
+      z-index: 1;
+    }
 
-#hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
+    #hero .container {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+    }
 
-.btn {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
+    #hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
 
-section {
-  padding: 50px 0;
-}
+    #hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
 
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
+    .btn {
+      display: inline-block;
+      background-color: #27ae60;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+    }
 
-ul {
-  list-style: none;
-  padding-left: 20px;
-}
+    .btn:hover {
+      background-color: #219150;
+      box-shadow: 0 6px 20px rgba(33, 145, 80, 0.7);
+    }
 
-ul li {
-  margin-bottom: 10px;
-}
+    section {
+      padding: 60px 0;
+      text-align: center;
+    }
 
-footer {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 20px 0;
-}
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      color: #27ae60;
+      font-weight: 700;
+    }
 
-footer p {
-  font-size: 1rem;
-}
+    section p {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    #oferta ul {
+      list-style: none;
+      max-width: 400px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+
+    #oferta ul li {
+      font-size: 1.1rem;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+      color: #444;
+    }
+
+    #oferta ul li:last-child {
+      border-bottom: none;
+    }
+
+    #kontakt p, #kontakt a {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+
+    #kontakt a:hover {
+      color: #27ae60;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #f4f4f4;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1rem;
+      color: #777;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Responsywność */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      #hero h2 {
+        font-size: 2rem;
+      }
+
+      #hero p {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Dr Adwent</h1>
+      <nav>
+        <ul>
+          <li><a href="#o-mnie">O mnie</a></li>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h2>Profesjonalna medycyna estetyczna w Tarnowskich Górach</h2>
+      <p>Osiągnij naturalne piękno i pewność siebie z pomocą nowoczesnych technologii.</p>
+      <a href="#kontakt" class="btn">Umów się na wizytę</a>
+    </div>
+  </section>
+
+  <section id="o-mnie">
+    <div class="container">
+      <h2>O mnie</h2>
+      <p>Jestem lekarzem medycyny estetycznej z wieloletnim doświadczeniem. Specjalizuję się w zabiegach, które poprawiają wygląd i wspierają zdrowie skóry.</p>
+    </div>
+  </section>
+
+  <section id="oferta">
+    <div class="container">
+      <h2>Oferta</h2>
+      <ul>
+        <li>Toksyna botulinowa</li>
+        <li>Mezoterapia</li>
+        <li>Kwas hialuronowy</li>
+        <li>Osocze bogatopłytkowe</li>
+        <li>Peelingi chemiczne</li>
+        <li>Leczenie trądziku</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <p>Piastowska 7, Tarnowskie Góry</p>
+      <p>576 575 515</p>
+      <p><a href="mailto:dradwent@gmail.com">dradwent@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Dr Adwent - Medycyna Estetyczna</p>
+    </div>
+  </footer>
+</body>
+</html>
